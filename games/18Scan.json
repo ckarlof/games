@@ -3,12 +3,13 @@
     "title": "18Scan",
     "subtitle": "Railroading under the Northern Lights",
     "designer": "David G. D. Hecht",
+    "publisher": "dtg",
     "background": "water",
     "titleRotate": -90,
     "titleSize": 100,
     "titleX": 125,
     "titleY": 250,
-    "subTitleSize": 18,
+    "subtitleSize": 18,
     "designerSize": 13,
     "currency": "K#"
   },
@@ -18,9 +19,15 @@
   },
   "tokens": [
     "Round",
-    { "icon": "boat" },
-    { "icon": "boat" },
-    { "icon": "coal" }
+    {
+      "icon": "boat"
+    },
+    {
+      "icon": "boat"
+    },
+    {
+      "icon": "coal"
+    }
   ],
   "ipo": false,
   "bank": 6000,
@@ -143,120 +150,66 @@
       "quantity": 6,
       "price": 100,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4/3+3"
-        }
-      ]
+      "rust": "4"
     },
     {
       "name": "1+1",
       "quantity": 6,
       "price": 80,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4/3+3"
-        }
-      ]
+      "rust": "4"
     },
     {
       "name": "3",
       "quantity": 4,
       "price": 200,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 5/4+4"
-        }
-      ]
+      "rust": "5"
     },
     {
       "name": "2+2",
       "quantity": 4,
       "price": 180,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 5/4+4"
-        }
-      ]
+      "rust": "5"
     },
     {
       "name": "4",
       "quantity": 3,
       "price": 300,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 4D"
-        }
-      ]
+      "rust": "4D"
     },
     {
       "name": "3+3",
       "quantity": 3,
       "price": 280,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 4D"
-        }
-      ]
+      "rust": "4D"
     },
     {
       "name": "5",
       "quantity": 2,
       "price": 500,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "4+4",
       "quantity": 2,
       "price": 480,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "5E",
       "quantity": 2,
       "price": 600,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "4D",
       "quantity": 6,
       "price": 800,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     }
   ],
   "privates": [
@@ -313,102 +266,82 @@
   ],
   "phases": [
     {
-      "name": "2 / 1+1",
-      "number": "6",
-      "limit": "4",
+      "name": "2",
+      "train": ["2", "1+1"],
+      "limit": 4,
       "tiles": "yellow"
     },
     {
-      "name": "3 / 2+2",
-      "number": "4",
-      "limit": "4",
+      "name": "3",
+      "train": ["3", "2+2"],
+      "limit": 4,
       "tiles": "green"
     },
     {
-      "name": "4 / 3+3",
-      "number": "3",
-      "limit": "3",
-      "tiles": "green",
-      "rust": "2 / 1+1"
+      "name": "4",
+      "train": ["4", "3+3"],
+      "limit": 3,
+      "tiles": "green"
     },
     {
-      "name": "5 / 4+4",
-      "number": "2",
-      "limit": "2",
+      "name": "5",
+      "train": ["5", "4+4"],
+      "limit": 2,
       "tiles": "brown",
-      "rust": "3 / 2+2",
-      "notes": [
-        "5E trains may be purchased",
-        "",
-        "Private and Minor Companies are closed",
-        "",
-        "SJ eligible to form"
-      ]
+      "notes": "5E trains may be purchased. Private and Minor Companies are closed. SJ eligible to form."
     },
     {
       "name": "5E",
-      "limit": "2",
-      "number": "2",
+      "limit": 2,
       "tiles": "brown",
-      "notes": ["4D trains may be purchased"]
+      "notes": "4D trains may be purchased."
     },
     {
       "name": "4D",
-      "number": "6",
-      "limit": "2",
-      "tiles": "brown",
-      "rust": "4 / 3+3"
+      "limit": 2,
+      "tiles": "brown"
     },
     {
       "company": "SJ",
-      "name": "5 / 4+4",
-      "number": "2",
-      "limit": "3",
+      "name": "5",
+      "train": ["5", "4+4"],
+      "limit": 3,
       "tiles": "brown",
-      "rust": "3 / 2+2",
-      "notes": [
-        "5E trains may be purchased",
-        "",
-        "Private and Minor Companies are closed"
-      ]
+      "notes": "5E trains may be purchased. Private and Minor Companies are closed."
     },
     {
       "company": "SJ",
       "name": "5E",
-      "limit": "3",
-      "number": "2",
+      "limit": 3,
       "tiles": "brown",
-      "notes": ["4D trains may be purchased"]
+      "notes": "4D trains may be purchased."
     },
     {
       "company": "SJ",
       "name": "4D",
-      "number": "6",
-      "limit": "3",
-      "tiles": "brown",
-      "rust": "4 / 3+3"
+      "limit": 3,
+      "tiles": "brown"
     },
     {
       "minor": true,
-      "name": "2 / 1+1",
-      "number": "6",
-      "limit": "2",
+      "name": "2",
+      "train": ["2", "1+1"],
+      "limit": 2,
       "tiles": "yellow"
     },
     {
       "minor": true,
-      "name": "3 / 2+2",
-      "number": "4",
-      "limit": "2",
+      "name": "3",
+      "train": ["3", "2+2"],
+      "limit": 2,
       "tiles": "green"
     },
     {
       "minor": true,
-      "name": "4 / 3+3",
-      "number": "3",
-      "limit": "1",
-      "tiles": "green",
-      "rust": "2 / 1+1"
+      "name": "4",
+      "train": ["4", "3+3"],
+      "limit": 1,
+      "tiles": "green"
     }
   ],
   "pools": [
@@ -694,7 +627,7 @@
       ],
       "terrain": [
         {
-          "cost": "K40",
+          "cost": 40,
           "size": "tiny",
           "x": -50,
           "y": -20
@@ -787,12 +720,13 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["A4"],
+        "track": [
           {
-            "side": 5
+            "side": 5,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["A4"]
+        ]
       },
       {
         "cities": [
@@ -804,12 +738,15 @@
             }
           }
         ],
-        "mountain": {
-          "angle": 45,
-          "percent": 0.333,
-          "cost": 60
-        },
-        "hexes": ["A18"]
+        "hexes": ["A18"],
+        "terrain": [
+          {
+            "angle": 45,
+            "percent": 0.333,
+            "cost": 60,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "offboard",
@@ -869,11 +806,6 @@
             }
           }
         ],
-        "mountain": {
-          "angle": 315,
-          "percent": 0.333,
-          "cost": 60
-        },
         "tokens": [
           {
             "company": "2",
@@ -881,7 +813,15 @@
             "percent": 0.75
           }
         ],
-        "hexes": ["B11"]
+        "hexes": ["B11"],
+        "terrain": [
+          {
+            "angle": 315,
+            "percent": 0.333,
+            "cost": 60,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "cities": [
@@ -943,10 +883,12 @@
             "companies": ["NSB"]
           }
         ],
-        "labels": {
-          "label": "Y",
-          "x": 50
-        },
+        "labels": [
+          {
+            "label": "Y",
+            "x": 50
+          }
+        ],
         "tokens": [
           {
             "company": "3",
@@ -1042,15 +984,17 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["F1"],
+        "track": [
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           },
           {
-            "side": 4
+            "side": 4,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["F1"]
+        ]
       },
       {
         "centerTowns": [
@@ -1079,12 +1023,15 @@
             "percent": 0.5
           }
         ],
-        "water": {
-          "angle": 45,
-          "percent": 0.5,
-          "cost": 40
-        },
-        "hexes": ["F3"]
+        "hexes": ["F3"],
+        "terrain": [
+          {
+            "angle": 45,
+            "percent": 0.5,
+            "cost": 40,
+            "type": "water"
+          }
+        ]
       },
       {
         "centerTowns": [
@@ -1114,19 +1061,23 @@
             "companies": ["2"]
           }
         ],
-        "labels": {
-          "label": "Y",
-          "x": 30,
-          "y": 15
-        },
+        "labels": [
+          {
+            "label": "Y",
+            "x": 30,
+            "y": 15
+          }
+        ],
         "track": [
           {
             "side": 1,
-            "type": "stop"
+            "type": "straight",
+            "end": 0.25
           },
           {
             "side": 2,
-            "type": "stop"
+            "type": "straight",
+            "end": 0.25
           }
         ],
         "values": [
@@ -1187,15 +1138,17 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["G2"],
+        "track": [
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           },
           {
-            "side": 4
+            "side": 4,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["G2"]
+        ]
       },
       {
         "cities": [
@@ -1208,12 +1161,15 @@
             "companies": ["1"]
           }
         ],
-        "water": {
-          "angle": 45,
-          "percent": 0.333,
-          "cost": 40
-        },
-        "hexes": ["G4"]
+        "hexes": ["G4"],
+        "terrain": [
+          {
+            "angle": 45,
+            "percent": 0.333,
+            "cost": 40,
+            "type": "water"
+          }
+        ]
       },
       {
         "color": "water",
@@ -1242,10 +1198,12 @@
             "companies": ["VR"]
           }
         ],
-        "labels": {
-          "label": "Y",
-          "x": 50
-        },
+        "labels": [
+          {
+            "label": "Y",
+            "x": 50
+          }
+        ],
         "hexes": ["G14"]
       },
       {
@@ -1287,12 +1245,13 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["H13"],
+        "track": [
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["H13"]
+        ]
       },
       {
         "color": "offboard",
@@ -1323,18 +1282,16 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["H17"],
+        "track": [
           {
-            "side": 2
+            "side": 2,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["H17"]
+        ]
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": 60
-        },
         "hexes": [
           "A6",
           "A8",
@@ -1349,6 +1306,12 @@
           "C6",
           "C8",
           "C10"
+        ],
+        "terrain": [
+          {
+            "cost": 60,
+            "type": "mountain"
+          }
         ]
       },
       {

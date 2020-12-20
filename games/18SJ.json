@@ -3,30 +3,50 @@
     "title": "18SJ",
     "subtitle": "Let there be rail",
     "designer": "Örjan Wennman",
-    "background": "plain",
+    "background": "_pink",
     "titleX": 50,
-    "titleY": 600
+    "titleY": 600,
+    "extraStationTokens": 1,
+    "currency": "# kr"
   },
   "links": {
     "rules": "https://drive.google.com/open?id=1y9b9o7WL1Pt7ArqC7Nf5656hzTZWD4-9"
   },
   "tokens": [
     {
-      "color": "white",
-      "label": "SJ",
-      "bar": "black",
-      "barHeight": 25,
-      "fontSize": 18
+      "label": "Round",
+      "quantity": 0,
+      "print": 1
+    },
+    {
+      "label": "20",
+      "quantity": 0,
+      "print": 1
+    },
+    {
+      "label": "30",
+      "quantity": 0,
+      "print": 1
+    },
+    {
+      "label": "50",
+      "quantity": 0,
+      "print": 1
+    },
+    {
+      "label": "KHJ",
+      "fontSize": 24
     },
     {
       "color": "white",
-      "label": "+25",
+      "label": "+30",
       "icon": "port"
     },
     {
       "color": "white",
       "icon": "steamboat",
-      "quantity": 3
+      "quantity": 3,
+      "iconWidth": 50
     },
     {
       "color": "white",
@@ -37,13 +57,20 @@
       "color": "white",
       "label": "M",
       "fontSize": 24
+    },
+    {
+      "logo": "SJ",
+      "logoWidth": 100,
+      "quantity": "∞",
+      "print": 13
     }
   ],
+  "bank": 12000,
   "tokenTypes": {
     "one": ["Home"],
-    "two": ["Home", 40, 0],
-    "three": ["Home", 40, 100, 0],
-    "four": ["Home", 40, 100, 100, 0]
+    "two": ["Home", 40],
+    "three": ["Home", 40, 100],
+    "four": ["Home", 40, 100, 100]
   },
   "colors": {
     "mainline": "#98ff98",
@@ -59,9 +86,52 @@
     "_orange": "#ff6600",
     "_turquoise": "#43c6db"
   },
+  "players": [
+    {
+      "number": 2,
+      "certLimit": 28,
+      "capital": 1200
+    },
+    {
+      "number": 3,
+      "certLimit": 20,
+      "capital": 800
+    },
+    {
+      "number": 4,
+      "certLimit": 16,
+      "capital": 600
+    },
+    {
+      "number": 5,
+      "certLimit": 13,
+      "capital": 480
+    },
+    {
+      "number": 6,
+      "certLimit": 11,
+      "capital": 400
+    }
+  ],
+  "shareTypes": {
+    "default": [
+      {
+        "quantity": 1,
+        "label": "President's Certificate",
+        "percent": 20,
+        "shares": 2
+      },
+      {
+        "quantity": 8,
+        "percent": 10,
+        "shares": 1
+      }
+    ]
+  },
+  "floatPercent": 60,
   "companies": [
     {
-      "name": "BJ",
+      "name": "Bergslagernas järnvägar AB",
       "abbrev": "BJ",
       "color": "_brown",
       "tokens": "three",
@@ -71,7 +141,7 @@
       }
     },
     {
-      "name": "KFJ",
+      "name": "Kil-Fryksdalens Järnväg",
       "abbrev": "KFJ",
       "color": "_pink",
       "tokens": "three",
@@ -81,7 +151,7 @@
       }
     },
     {
-      "name": "MYJ",
+      "name": "Malmö-Ystads järnväg",
       "abbrev": "MYJ",
       "color": "_yellow",
       "tokens": "three",
@@ -91,7 +161,7 @@
       }
     },
     {
-      "name": "MÖJ",
+      "name": "Mellersta Östergötlands Järnvägar",
       "abbrev": "MÖJ",
       "color": "_turquoise",
       "tokens": "two",
@@ -101,7 +171,7 @@
       }
     },
     {
-      "name": "SNJ",
+      "name": "The Swedish-Norwegian Railroad Company ltd",
       "abbrev": "SNJ",
       "color": "_blue",
       "tokens": "four",
@@ -111,7 +181,7 @@
       }
     },
     {
-      "name": "STJ",
+      "name": "Sundsvall-Torphammars järnväg",
       "abbrev": "STJ",
       "color": "_black",
       "tokens": "four",
@@ -121,7 +191,7 @@
       }
     },
     {
-      "name": "SWB",
+      "name": "Stockholm-Västerås-Bergslagens Järnvägar",
       "abbrev": "SWB",
       "color": "_green",
       "tokens": "two",
@@ -131,7 +201,7 @@
       }
     },
     {
-      "name": "TGOJ",
+      "name": "Trafikaktiebolaget Grängesberg-Oxelösunds järnvägar",
       "abbrev": "TGOJ",
       "color": "_orange",
       "tokens": "four",
@@ -141,7 +211,7 @@
       }
     },
     {
-      "name": "UGJ",
+      "name": "Uppsala-Gävle järnväg",
       "abbrev": "UGJ",
       "color": "_lime",
       "tokens": "three",
@@ -151,7 +221,7 @@
       }
     },
     {
-      "name": "ÖKJ",
+      "name": "Örebro-Köpings järnvägsaktiebolag",
       "abbrev": "ÖKJ",
       "color": "_purple",
       "tokens": "two",
@@ -161,7 +231,7 @@
       }
     },
     {
-      "name": "ÖSJ",
+      "name": "Östra Skånes Järnvägsaktiebolag",
       "abbrev": "ÖSJ",
       "color": "_red",
       "tokens": "three",
@@ -171,7 +241,7 @@
       }
     },
     {
-      "name": "KHJ",
+      "name": "Köping-Hults järnväg",
       "abbrev": "KHJ",
       "color": "white",
       "tokens": "one",
@@ -179,6 +249,248 @@
       "token": {
         "fontSize": 18
       }
+    }
+  ],
+  "trains": [
+    {
+      "name": "2",
+      "quantity": 6,
+      "price": 80,
+      "color": "yellow",
+      "image": "2T",
+      "rust": "4"
+    },
+    {
+      "name": "3",
+      "quantity": 5,
+      "price": 180,
+      "color": "green",
+      "image": "3T",
+      "rust": "6"
+    },
+    {
+      "name": "4",
+      "quantity": 4,
+      "price": 300,
+      "color": "green",
+      "image": "4T",
+      "rust": "D"
+    },
+    {
+      "name": "5",
+      "quantity": 3,
+      "price": 450,
+      "color": "brown",
+      "image": "5T"
+    },
+    {
+      "name": "6",
+      "quantity": 2,
+      "price": 630,
+      "color": "gray",
+      "image": "6T"
+    },
+    {
+      "name": "D",
+      "quantity": "∞",
+      "print": 6,
+      "price": 1100,
+      "color": "gray",
+      "description": "Cost 800 kr when trading in a 4T, 5T or 6T",
+      "discount": {
+        "4": 300,
+        "5": 300,
+        "6": 300
+      }
+    },
+    {
+      "name": "E",
+      "quantity": "∞",
+      "print": 6,
+      "price": 1300,
+      "color": "gray",
+      "description": "Cost 1000 kr when trading in a 4T, 5T or 6T",
+      "available": "6",
+      "discount": {
+        "4": 300,
+        "5": 300,
+        "6": 300
+      }
+    }
+  ],
+  "privates": [
+    {
+      "name": "Frykstadsbanan",
+      "price": 20,
+      "revenue": 5,
+      "description": "Blocks hex B17 if owned by a player."
+    },
+    {
+      "name": "Nässjö-Oskarshamns järnväg (NOJ)",
+      "price": 20,
+      "revenue": 5,
+      "description": "Blocks hex D9 if owned by a player."
+    },
+    {
+      "name": "Göta kanalbolag",
+      "price": 40,
+      "revenue": 10,
+      "description": "Owning corporation may add +50/30/20 to train runs in hex E8, C8 and C16 in three different ORs"
+    },
+    {
+      "name": "Sveabolaget",
+      "price": 45,
+      "revenue": 15,
+      "description": "May lay or shift port token in hexes A6, D5, F19, F23, and G26.  Add 25 kr/symbol to all routes run to this location by owning company."
+    },
+    {
+      "name": "The Gellivare Company",
+      "price": 70,
+      "revenue": 30,
+      "description": "Two extra track lays in hex E28 and F27.  Blocks hexes E28 and F27 if owned by a player."
+    },
+    {
+      "name": "Motala Verkstad",
+      "price": 90,
+      "revenue": 15,
+      "description": "Owning corporation may buy trains at any time during operating rounds."
+    },
+    {
+      "name": "Nydqvist och Holm AB (NOHAB)",
+      "price": 90,
+      "revenue": 20,
+      "description": "May buy one train at half price (one time during the game)."
+    },
+    {
+      "name": "Köping-Hults järnväg (KHJ)",
+      "price": 140,
+      "description": "Owner receives a 50 kr loan.  Owner must pay loan back if hexes F13, E14 and C16 do not have tiles at the start of phase 4.  Private receives a 2T and a token.  Splits revenue evenly with owner."
+    },
+    {
+      "name": "Nils Ericson",
+      "price": 220,
+      "revenue": 25,
+      "description": "Receive presidents share in a corporation randomly determined before auction.  Owning player may take the priority deal at the beginning of one stock round."
+    },
+    {
+      "name": "Adolf Eugene von Rosen",
+      "price": 220,
+      "revenue": 30,
+      "company": "ÖKJ",
+      "description": "Receive presidents share in ÖKJ."
+    }
+  ],
+  "phases": [
+    {
+      "name": "2",
+      "limit": 4,
+      "rounds": 1,
+      "tiles": "yellow"
+    },
+    {
+      "name": "3",
+      "limit": 4,
+      "rounds": 2,
+      "tiles": "green",
+      "notes": ["Private companies may be purchased."]
+    },
+    {
+      "name": "4",
+      "limit": 3,
+      "rounds": 2,
+      "tiles": "green"
+    },
+    {
+      "name": "5",
+      "limit": 2,
+      "rounds": 3,
+      "tiles": "brown",
+      "notes": ["Private companies are closed.  Full cap"]
+    },
+    {
+      "name": "6",
+      "limit": 2,
+      "rounds": 3,
+      "tiles": "gray",
+      "notes": ["D/E Trains may be purchased."]
+    },
+    {
+      "name": "D",
+      "limit": 2,
+      "rounds": 3,
+      "tiles": "gray"
+    },
+    {
+      "name": "E",
+      "limit": 2,
+      "rounds": 3,
+      "tiles": "gray"
+    }
+  ],
+  "pools": [
+    {
+      "name": "Market",
+      "notes": [
+        {
+          "color": "orange",
+          "note": "Shares in the IPO or market pay dividends to the bank."
+        },
+        {
+          "color": "orange",
+          "note": "Shares on the corporation's charter pay dividends to the corporation."
+        },
+        {
+          "color": "brown",
+          "icon": "exclamation",
+          "note": "No more than 50% of a corporation's shares may be in the market at any time."
+        },
+        {
+          "color": "red",
+          "icon": "times",
+          "note": "Shares cannot be sold during the first stock round."
+        }
+      ]
+    }
+  ],
+  "rounds": [
+    {
+      "name": "OR3",
+      "color": "brown"
+    },
+    {
+      "name": "OR2",
+      "color": "green"
+    },
+    {
+      "name": "OR1",
+      "color": "yellow"
+    },
+    {
+      "name": "SR",
+      "color": "white"
+    }
+  ],
+  "turns": [
+    {
+      "name": "Stock Round",
+      "steps": [
+        "Sell any number of shares",
+        "Buy one share",
+        "Sell any number of shares"
+      ],
+      "ordered": true
+    },
+    {
+      "name": "Operating Round",
+      "steps": [
+        "Lay or upgrade track",
+        "Purchase a station",
+        "Run trains",
+        "Pay dividends or withhold revenue",
+        "Purchase trains"
+      ],
+      "ordered": true,
+      "optional": ["Purchase private companies"]
     }
   ],
   "stock": {
@@ -625,9 +937,18 @@
   "tiles": {
     "5": 4,
     "6": 4,
-    "7": 0,
-    "8": 0,
-    "9": 0,
+    "7": {
+      "quantity": "∞",
+      "print": 10
+    },
+    "8": {
+      "quantity": "∞",
+      "print": 10
+    },
+    "9": {
+      "quantity": "∞",
+      "print": 11
+    },
     "14": 4,
     "15": 4,
     "16": 2,
@@ -1046,48 +1367,42 @@
         "hexes": ["A10"]
       },
       {
-        "color": "offboard",
+        "color": "gray",
+        "cities": [{}],
         "track": [
           {
-            "type": "offboard",
             "side": 1
           },
           {
-            "type": "offboard",
             "side": 5
           },
           {
-            "type": "offboard",
             "side": 6
           }
         ],
         "names": [
           {
-            "y": -10,
+            "y": -20,
             "name": "Oslo",
             "fontSize": 14
           }
         ],
-        "labels": [
-          {
-            "angle": 240,
-            "percent": 0.8,
-            "label": "U"
-          }
-        ],
         "offBoardRevenue": {
+          "x": 45,
+          "y": -20,
+          "rows": 3,
           "revenues": [
             {
               "color": "yellow",
-              "cost": "20"
+              "cost": "50"
             },
             {
               "color": "green",
-              "cost": "30"
+              "cost": "40"
             },
             {
               "color": "brown",
-              "cost": "30"
+              "cost": "20"
             }
           ]
         },
@@ -2011,31 +2326,28 @@
         "labels": [
           {
             "y": -25,
-            "label": "S - U"
+            "label": "Ö - V"
           }
         ],
-        "routeBonus": [
+        "routeBonuses": [
           {
-            "x": -30,
-            "fillColor": "yellow",
-            "value": "+50"
-          },
+            "value": "+120"
+          }
+        ],
+        "hexes": ["G18"]
+      },
+      {
+        "color": "white",
+        "removeBorders": [1, 4, 5, 6],
+        "labels": [
           {
-            "x": 30,
-            "fillColor": "green",
-            "value": "+50"
-          },
+            "y": -25,
+            "label": "Ö - K"
+          }
+        ],
+        "routeBonuses": [
           {
-            "x": -30,
-            "y": 30,
-            "fillColor": "brown",
-            "value": "+30"
-          },
-          {
-            "x": 30,
-            "y": 30,
-            "fillColor": "gray",
-            "value": "-"
+            "value": "+100"
           }
         ],
         "hexes": ["G20"]
@@ -2049,44 +2361,12 @@
             "label": "S - N"
           }
         ],
-        "routeBonus": [
+        "routeBonuses": [
           {
             "value": "+100"
           }
         ],
         "hexes": ["G22"]
-      },
-      {
-        "color": "white",
-        "removeBorders": [4, 5, 6],
-        "labels": [
-          {
-            "y": -25,
-            "label": "Ö - V"
-          }
-        ],
-        "routeBonus": [
-          {
-            "value": "+120"
-          }
-        ],
-        "hexes": ["G16"]
-      },
-      {
-        "color": "white",
-        "removeBorders": [1, 4, 5, 6],
-        "labels": [
-          {
-            "y": -25,
-            "label": "Ö - K"
-          }
-        ],
-        "routeBonus": [
-          {
-            "value": "+100"
-          }
-        ],
-        "hexes": ["G18"]
       },
       {
         "color": "white",
@@ -2097,7 +2377,7 @@
             "label": "B - b"
           }
         ],
-        "routeBonus": [
+        "routeBonuses": [
           {
             "value": "+50"
           }
@@ -2114,9 +2394,9 @@
             "size": 20
           }
         ],
-        "routeBonus": [
+        "routeBonuses": [
           {
-            "value": "+75"
+            "value": "+80"
           }
         ],
         "hexes": ["H19"]
@@ -2130,7 +2410,7 @@
             "label": "M - m"
           }
         ],
-        "routeBonus": [
+        "routeBonuses": [
           {
             "value": "+50"
           }
@@ -2147,7 +2427,7 @@
             "size": 20
           }
         ],
-        "routeBonus": [
+        "routeBonuses": [
           {
             "value": "+100"
           }

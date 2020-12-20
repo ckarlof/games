@@ -5,7 +5,7 @@
     "designer": "Tom Schoeps",
     "background": "tile_pink",
     "titleSize": 108,
-    "subTitleSize": 28,
+    "subtitleSize": 28,
     "marketTokens": 2,
     "titleY": -80,
     "titleX": 20,
@@ -199,243 +199,147 @@
     {
       "name": "2T",
       "quantity": 6,
-      "price": "$80",
+      "price": 80,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4T"
-        }
-      ]
+      "rust": "4T"
     },
     {
       "name": "2+1T",
       "quantity": 2,
-      "price": "$120",
+      "price": 120,
       "color": "yellow",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 5T"
-        }
-      ]
+      "rust": "5T"
     },
     {
       "name": "3T",
       "quantity": 3,
-      "price": "$180",
+      "price": 180,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 6T"
-        }
-      ]
+      "rust": "6T"
     },
     {
       "name": "4T",
       "quantity": 3,
-      "price": "$300",
+      "price": 300,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by DT"
-        }
-      ]
+      "rust": "DT"
     },
     {
       "name": "5T",
       "quantity": 3,
-      "price": "$450",
-      "color": "brown",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
+      "price": 450,
+      "color": "brown"
     },
     {
       "name": "6T",
       "quantity": 2,
-      "price": "$630",
-      "color": "brown",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
+      "price": 630,
+      "color": "brown"
     },
     {
       "name": "6+xT",
       "quantity": 1,
-      "price": "$780",
-      "color": "gray",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
+      "price": 780,
+      "color": "gray"
     },
     {
       "name": "7T",
       "quantity": 2,
-      "price": "$700",
-      "color": "gray",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
+      "price": 700,
+      "color": "gray"
     },
     {
       "name": "8T",
       "quantity": 2,
-      "price": "$800",
-      "color": "gray",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
+      "price": 800,
+      "color": "gray"
     },
     {
       "name": "6+xT",
       "quantity": 2,
-      "price": "$780",
-      "color": "gray",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
+      "price": 780,
+      "color": "gray"
     },
     {
       "name": "DT",
       "quantity": 8,
-      "price": "$1100",
+      "price": 1100,
       "color": "tile_pink",
       "description": "Cost $800 when trading in a 4T - 8T",
-      "info": [
-        {
-          "color": "black",
-          "note": "Permanent"
-        }
-      ]
-    },
-    {
-      "name": "Mail Car",
-      "fontSize": 12,
-      "quantity": 1,
-      "price": "$70",
-      "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "discount": {
+        "4T": 300,
+        "5T": 300,
+        "6T": 300,
+        "7T": 300,
+        "8T": 300
+      }
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$80",
+      "price": 70,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$90",
+      "price": 80,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$100",
+      "price": 90,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$120",
+      "price": 100,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$150",
+      "price": 120,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$180",
+      "price": 150,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
     },
     {
       "name": "Mail Car",
       "quantity": 1,
-      "price": "$200",
+      "price": 180,
       "color": "mailcar_red",
-      "info": [
-        {
-          "color": "white",
-          "note": "one per company max"
-        }
-      ]
+      "description": "One per company max"
+    },
+    {
+      "name": "Mail Car",
+      "quantity": 1,
+      "price": 200,
+      "color": "mailcar_red",
+      "description": "One per company max"
     }
   ],
   "privates": [
     {
       "name": "Private #1",
-      "price": "$20",
+      "price": 20,
       "revenue": 5
     },
     {
       "name": "Private #2",
-      "price": "$40",
+      "price": 40,
       "revenue": 10
     },
     {
@@ -464,71 +368,56 @@
   "phases": [
     {
       "name": "2T",
-      "limit": "4",
-      "number": "6",
+      "limit": 4,
       "tiles": "yellow"
     },
     {
       "name": "2+1T",
-      "limit": "4",
-      "number": "2",
+      "limit": 4,
       "tiles": "yellow"
     },
     {
       "name": "3T",
-      "limit": "4",
-      "number": "5",
+      "limit": 4,
       "tiles": "green"
     },
     {
       "name": "4T",
-      "rust": "2T",
-      "limit": "3",
-      "number": "4",
+      "limit": 3,
       "tiles": "green",
       "notes": "In games without private companies, the per-OR d6x10 revenue ends."
     },
     {
       "name": "5T",
-      "rust": "2+1T",
-      "limit": "2",
-      "number": "3",
+      "limit": 2,
       "tiles": "brown",
       "notes": "Private companies are closed."
     },
     {
       "name": "6T",
-      "limit": "2",
-      "number": "2",
-      "rust": "3T",
+      "limit": 2,
       "tiles": "brown",
       "notes": "All other trains available, including DT."
     },
     {
       "name": "7T",
-      "limit": "2",
-      "number": "2",
+      "limit": 2,
       "tiles": "gray"
     },
     {
       "name": "8T",
-      "limit": "2",
-      "number": "2",
-      "rust": "3T",
+      "limit": 2,
       "tiles": "gray"
     },
     {
       "name": "6+xT",
-      "limit": "2",
-      "number": "2",
+      "limit": 2,
       "tiles": "gray",
       "notes": "Only used in some scenarios."
     },
     {
       "name": "DT",
-      "limit": "2",
-      "number": "6",
-      "rust": "4T",
+      "limit": 2,
       "tiles": "pink"
     }
   ],
@@ -1148,12 +1037,14 @@
       ],
       "track": [
         {
-          "type": "stop",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.25
         },
         {
-          "type": "stop",
-          "side": 3
+          "type": "straight",
+          "side": 3,
+          "end": 0.25
         }
       ]
     },
@@ -1217,8 +1108,9 @@
       ],
       "track": [
         {
-          "type": "stop",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.25
         },
         {
           "type": "sharp",
@@ -1286,8 +1178,9 @@
       ],
       "track": [
         {
-          "type": "stop",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.25
         },
         {
           "type": "gentle",
@@ -1355,8 +1248,9 @@
       ],
       "track": [
         {
-          "type": "stop",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.25
         },
         {
           "type": "bent",
@@ -2059,12 +1953,14 @@
           "side": 6
         },
         {
-          "type": "stub",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.125
         },
         {
-          "type": "stub",
-          "side": 4
+          "type": "straight",
+          "side": 4,
+          "end": 0.125
         }
       ]
     },
@@ -2268,12 +2164,14 @@
           "side": 6
         },
         {
-          "type": "stub",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.125
         },
         {
-          "type": "stub",
-          "side": 4
+          "type": "straight",
+          "side": 4,
+          "end": 0.125
         }
       ]
     },
@@ -2437,12 +2335,14 @@
           "path": "m 0 75 L 30 10"
         },
         {
-          "type": "stub",
-          "side": 1
+          "type": "straight",
+          "side": 1,
+          "end": 0.125
         },
         {
-          "type": "stub",
-          "side": 4
+          "type": "straight",
+          "side": 4,
+          "end": 0.125
         },
         {
           "type": "custom",
@@ -2464,7 +2364,7 @@
       "values": [
         {
           "angle": 210,
-          "percent": 0.85,
+          "percent": 0.8,
           "value": 100
         }
       ],
@@ -2496,8 +2396,7 @@
       ],
       "cities": [
         {
-          "size": 3,
-          "rotate": 180
+          "size": 3
         }
       ],
       "track": [
@@ -3014,8 +2913,9 @@
           "side": 3
         },
         {
-          "type": "stub",
-          "side": 4
+          "type": "straight",
+          "side": 4,
+          "end": 0.125
         },
         {
           "type": "sharp",
@@ -3059,8 +2959,9 @@
           "side": 2
         },
         {
-          "type": "stub",
-          "side": 3
+          "type": "straight",
+          "side": 3,
+          "end": 0.125
         },
         {
           "type": "sharp",
@@ -3104,8 +3005,9 @@
           "side": 1
         },
         {
-          "type": "stop",
-          "side": 2
+          "type": "straight",
+          "side": 2,
+          "end": 0.25
         },
         {
           "type": "sharp",
@@ -3149,8 +3051,9 @@
           "side": 1
         },
         {
-          "type": "stop",
-          "side": 2
+          "type": "straight",
+          "side": 2,
+          "end": 0.25
         },
         {
           "type": "gentle",
@@ -3194,9 +3097,10 @@
           "side": 4
         },
         {
-          "type": "straightStop",
+          "type": "straight",
           "side": 2,
-          "cross": "over"
+          "cross": "over",
+          "end": 0.75
         },
         {
           "type": "gentle",
@@ -3243,8 +3147,9 @@
           "side": 6
         },
         {
-          "type": "gentleStop",
-          "side": 5
+          "type": "gentle",
+          "side": 5,
+          "end": 0.75
         }
       ]
     },
@@ -3284,8 +3189,9 @@
           "side": 1
         },
         {
-          "type": "stop",
-          "side": 2
+          "type": "straight",
+          "side": 2,
+          "end": 0.25
         },
         {
           "type": "sharp",
@@ -3335,8 +3241,9 @@
           "cross": "over"
         },
         {
-          "type": "sharpStop",
-          "side": 6
+          "type": "sharp",
+          "side": 6,
+          "end": 0.5
         }
       ]
     },
@@ -3382,8 +3289,9 @@
           "cross": "under"
         },
         {
-          "type": "stop",
-          "side": 5
+          "type": "straight",
+          "side": 5,
+          "end": 0.25
         }
       ]
     },
@@ -3458,12 +3366,15 @@
           "cross": "over"
         },
         {
-          "type": "stop",
-          "side": 4
+          "type": "straight",
+          "side": 4,
+          "end": 0.25
         },
         {
-          "type": "mid",
-          "side": 4
+          "type": "straight",
+          "side": 4,
+          "end": 0.5,
+          "start": 0.25
         },
         {
           "type": "sharp",
@@ -3513,8 +3424,9 @@
           "cross": "under"
         },
         {
-          "type": "stop",
-          "side": 3
+          "type": "straight",
+          "side": 3,
+          "end": 0.25
         }
       ]
     },
@@ -3560,8 +3472,9 @@
           "cross": "under"
         },
         {
-          "type": "gentleStopRev",
-          "side": 2
+          "type": "gentle",
+          "side": 6,
+          "start": 0.25
         }
       ]
     },
@@ -3605,12 +3518,14 @@
           "side": 1
         },
         {
-          "type": "stop",
-          "side": 5
+          "type": "straight",
+          "side": 5,
+          "end": 0.25
         },
         {
-          "type": "stop",
-          "side": 6
+          "type": "straight",
+          "side": 6,
+          "end": 0.25
         }
       ]
     },
@@ -3793,8 +3708,9 @@
           "side": 5
         },
         {
-          "type": "stop",
-          "side": 6
+          "type": "straight",
+          "side": 6,
+          "end": 0.25
         }
       ]
     },
@@ -3841,8 +3757,8 @@
       "rotations": 1,
       "values": [
         {
-          "angle": 270,
-          "percent": 0.925,
+          "angle": 210,
+          "percent": 0.85,
           "value": 80
         }
       ],

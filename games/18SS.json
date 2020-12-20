@@ -7,7 +7,7 @@
     "titleX": 940,
     "titleY": 1925,
     "titleSize": 150,
-    "subTitleSize": 20
+    "subtitleSize": 20
   },
   "links": {
     "bgg": "https://www.boardgamegeek.com/boardgame/109152/18ss",
@@ -51,31 +51,25 @@
   "phases": [
     {
       "name": "3",
-      "limit": "2",
-      "number": "7",
+      "limit": 2,
       "tiles": "yellow",
       "notes": "2 OR, yellow and green tiles"
     },
     {
       "name": "4",
-      "limit": "2",
-      "number": "6",
+      "limit": 2,
       "tiles": "green"
     },
     {
       "name": "6",
-      "limit": "2",
-      "number": "8",
+      "limit": 2,
       "tiles": "brown",
-      "rusts": "3",
       "notes": "Private companies close"
     },
     {
       "name": "8",
-      "limit": "2",
-      "number": "15",
-      "tiles": "brown",
-      "rusts": "4"
+      "limit": 2,
+      "tiles": "brown"
     }
   ],
   "turns": [
@@ -224,8 +218,8 @@
     ]
   },
   "tokenTypes": {
-    "default": ["Free", "Free", "Free"],
-    "2": ["Free", "Free"]
+    "2": ["Free", "Free"],
+    "default": ["Free", "Free", "Free"]
   },
   "companies": [
     {
@@ -333,21 +327,30 @@
       "name": "Tei Tramway",
       "price": 140,
       "revenue": 20,
-      "token": { "color": "white", "label": "優 電鉄" },
+      "token": {
+        "color": "white",
+        "label": "優 電鉄"
+      },
       "description": "When purchasing this private company for the first time, receive the president's 40% share certificate of Yuu Railway free of charge. This company will be closed when Yuu Railway purchases a train."
     },
     {
       "name": "Bo Tramway",
       "price": 170,
       "revenue": 25,
-      "token": { "color": "white", "label": "愛 電鉄" },
+      "token": {
+        "color": "white",
+        "label": "愛 電鉄"
+      },
       "description": "When purchasing this private company for the first time, receive a 20% share certificate of Ai Railway and a 20% share certificate of Yuu Railway free of charge. This company will be closed when the first 6 train is purchased, or when Ai Railway purchases a train. 20% share certificates of Ai Railway obtained through this private company can not be sold until Ai Railway is established."
     },
     {
       "name": "Ki Tramway",
       "price": 200,
       "revenue": 30,
-      "token": { "color": "white", "label": "葉 電鉄" },
+      "token": {
+        "color": "white",
+        "label": "葉 電鉄"
+      },
       "description": "When purchasing this private company for the first time, receive the president's 40% share certificate of Ha Railway free of charge. This company will be closed when the first 6 train is purchased, or when Ha Railway purchases a train."
     }
   ],
@@ -357,48 +360,26 @@
       "quantity": 7,
       "price": 250,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 6"
-        }
-      ]
+      "rust": "6"
     },
     {
       "name": "4",
       "quantity": 6,
       "price": 300,
       "color": "green",
-      "info": [
-        {
-          "color": "gray",
-          "note": "Rusted by 8"
-        }
-      ]
+      "rust": "8"
     },
     {
       "name": "6",
       "quantity": 8,
       "price": 450,
-      "color": "brown",
-      "info": [
-        {
-          "color": "orange",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "8",
       "quantity": 15,
       "price": 600,
-      "color": "gray",
-      "info": [
-        {
-          "color": "orange",
-          "note": "Permanent"
-        }
-      ]
+      "color": "gray"
     }
   ],
   "map": [
@@ -425,21 +406,23 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["P10"],
+          "track": [
             {
-              "side": 2
+              "side": 2,
+              "type": "offboard"
             },
             {
-              "side": 3
+              "side": 3,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["P10"]
+          ]
         },
         {
           "color": "offboard",
           "offBoardRevenue": {
-            "angle": 90,
-            "percent": -0.3,
+            "angle": 270,
+            "percent": 0.3,
             "reverse": true,
             "revenues": [
               {
@@ -456,18 +439,21 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["O15"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             },
             {
-              "side": 2
+              "side": 2,
+              "type": "offboard"
             },
             {
-              "side": 3
+              "side": 3,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["O15"]
+          ]
         },
         {
           "color": "offboard",
@@ -490,18 +476,21 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["O3"],
+          "track": [
             {
-              "side": 2
+              "side": 2,
+              "type": "offboard"
             },
             {
-              "side": 3
+              "side": 3,
+              "type": "offboard"
             },
             {
-              "side": 4
+              "side": 4,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["O3"]
+          ]
         },
         {
           "color": "plain",
@@ -525,12 +514,13 @@
               "type": "straight"
             }
           ],
-          "values": {
-            "angle": 0,
-            "percent": -0.7,
-            "reverse": true,
-            "value": 20
-          },
+          "values": [
+            {
+              "angle": 180,
+              "percent": 0.7,
+              "value": 20
+            }
+          ],
           "hexes": ["N10"]
         },
         {
@@ -559,8 +549,8 @@
           "labels": [
             {
               "label": "P",
-              "angle": 0,
-              "percent": -0.2
+              "angle": 180,
+              "percent": 0.2
             }
           ],
           "cities": [
@@ -618,8 +608,8 @@
         {
           "color": "offboard",
           "offBoardRevenue": {
-            "angle": 90,
-            "percent": -0.3,
+            "angle": 270,
+            "percent": 0.3,
             "reverse": true,
             "revenues": [
               {
@@ -636,15 +626,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["H16"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             },
             {
-              "side": 6
+              "side": 6,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["H16"]
+          ]
         },
         {
           "color": "plain",
@@ -653,7 +645,6 @@
               "companies": ["栗 電鉄"]
             }
           ],
-
           "hexes": ["H12"]
         },
         {
@@ -668,11 +659,13 @@
         },
         {
           "color": "green",
-          "labels": {
-            "label": "C",
-            "angle": 30,
-            "percent": -0.55
-          },
+          "labels": [
+            {
+              "label": "C",
+              "angle": 210,
+              "percent": 0.55
+            }
+          ],
           "centerTowns": [
             {
               "rotate": 30
@@ -686,19 +679,21 @@
           "values": [
             {
               "value": 10,
-              "angle": 270,
-              "percent": -0.5
+              "angle": 90,
+              "percent": 0.5
             }
           ],
           "hexes": ["B2"]
         },
         {
           "color": "green",
-          "labels": {
-            "label": "B",
-            "angle": 30,
-            "percent": -0.55
-          },
+          "labels": [
+            {
+              "label": "B",
+              "angle": 210,
+              "percent": 0.55
+            }
+          ],
           "centerTowns": [
             {
               "rotate": 30
@@ -776,27 +771,20 @@
               "type": "straight"
             }
           ],
-          "values": {
-            "angle": 0,
-            "percent": -0.7,
-            "reverse": true,
-            "value": 40
-          },
+          "values": [
+            {
+              "angle": 180,
+              "percent": 0.7,
+              "value": 40
+            }
+          ],
           "hexes": ["C5"]
         },
         {
           "color": "offboard",
-          "offBoardTrack": [
-            {
-              "side": 1
-            },
-            {
-              "side": 6
-            }
-          ],
           "offBoardRevenue": {
-            "angle": 90,
-            "percent": -0.37,
+            "angle": 270,
+            "percent": 0.37,
             "reverse": true,
             "revenues": [
               {
@@ -813,15 +801,27 @@
               }
             ]
           },
-          "hexes": ["B16"]
+          "hexes": ["B16"],
+          "track": [
+            {
+              "side": 1,
+              "type": "offboard"
+            },
+            {
+              "side": 6,
+              "type": "offboard"
+            }
+          ]
         },
         {
           "color": "green",
-          "labels": {
-            "label": "L",
-            "angle": 30,
-            "percent": -0.55
-          },
+          "labels": [
+            {
+              "label": "L",
+              "angle": 210,
+              "percent": 0.55
+            }
+          ],
           "centerTowns": [
             {
               "rotate": 30
@@ -841,8 +841,8 @@
           "values": [
             {
               "value": 20,
-              "angle": 330,
-              "percent": -0.5
+              "angle": 150,
+              "percent": 0.5
             }
           ],
           "hexes": ["B10"]

@@ -2,6 +2,7 @@
   "info": {
     "title": "18Mex",
     "designer": "Mark Derrick",
+    "publisher": "aag",
     "background": "brown",
     "orientation": "horizontal",
     "titleRotate": -90,
@@ -77,14 +78,16 @@
     {
       "name": "Chihuahua Pacific Railway",
       "abbrev": "CHI",
+      "logo": "18Mex/CHI",
       "color": "red",
       "tokens": "four"
     },
     {
       "name": "National Railways of Mexico",
       "abbrev": "NdM",
+      "logo": "18Mex/NdM",
       "color": "green",
-      "tokens": ["Free", "$40", "$60", "$80", "($80)", "($80)"],
+      "tokens": ["Free", 40, 60, 80, "($80)", "($80)"],
       "shares": [
         {
           "quantity": 1,
@@ -114,37 +117,42 @@
     {
       "name": "Mexican Central Railway",
       "abbrev": "MC",
+      "logo": "18Mex/MC",
       "color": "black",
       "tokens": "two"
     },
     {
       "name": "Pacific Railroad",
       "abbrev": "PAC",
+      "logo": "18Mex/PAC",
       "color": "yellow",
       "tokens": "four"
     },
     {
       "name": "Texas-Mexican Railway",
       "abbrev": "TM",
+      "logo": "18Mex/TM",
       "color": "orange",
       "tokens": "two"
     },
     {
       "name": "Mexican Railway",
       "abbrev": "MEX",
+      "logo": "18Mex/MEX",
       "color": "gray",
       "tokens": "three"
     },
     {
       "name": "Southern Pacific Railroad of Mexico",
       "abbrev": "SPM",
-      "logo": "SP",
+      "logo": "18Mex/SP",
       "color": "blue",
       "tokens": "three"
     },
     {
       "name": "United Railways of Yucatan",
       "abbrev": "UdY",
+      "logo": "18Mex/UdY",
       "color": "purple",
       "tokens": "two",
       "shares": [
@@ -172,74 +180,44 @@
     {
       "name": "2",
       "quantity": 6,
-      "price": "$100",
+      "price": 100,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4"
-        }
-      ]
+      "rust": "4"
     },
     {
       "name": "3",
       "quantity": 6,
-      "price": "$180",
+      "price": 180,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 6"
-        }
-      ]
+      "rust": "6"
     },
     {
       "name": "4",
       "quantity": 3,
-      "price": "$300",
+      "price": 300,
       "color": "green",
-      "info": [
-        {
-          "color": "gray",
-          "note": "Phased Out in 6.5"
-        }
-      ]
+      "obsolete": {
+        "on": "6",
+        "index": 2
+      }
     },
     {
       "name": "5",
       "quantity": 2,
-      "price": "$450",
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "price": 450,
+      "color": "brown"
     },
     {
       "name": "6",
       "quantity": 2,
-      "price": "$600",
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "price": 600,
+      "color": "brown"
     },
     {
       "name": "4D",
       "quantity": 7,
-      "price": "$700",
-      "color": "gray",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "price": 700,
+      "color": "gray"
     }
   ],
   "privates": [
@@ -247,7 +225,10 @@
       "name": "Mexico City-Acapulco Railroad",
       "price": 20,
       "revenue": 5,
-      "token": { "iconColor": "green", "icon": "train" }
+      "token": {
+        "iconColor": "green",
+        "icon": "train"
+      }
     },
     {
       "name": "Kansas City, Mexico, & Orient Railroad",
@@ -301,92 +282,64 @@
   ],
   "phases": [
     {
-      "phase": "2",
       "train": "2",
       "limit": 1,
-      "number": "6",
       "tiles": "yellow",
       "notes": "Buy only one train from bank.",
-      "price": 100,
-      "minor": true
+      "minor": true,
+      "name": "2"
     },
     {
-      "phase": "3",
       "train": "3",
       "limit": 1,
-      "number": "6",
       "tiles": "green",
       "notes": "Private companies may be purchased.",
-      "price": 180,
-      "minor": true
+      "minor": true,
+      "name": "3"
     },
     {
-      "phase": "2",
       "train": "2",
-      "limit": "-/3",
-      "number": "6",
+      "limit": 3,
       "tiles": "yellow",
       "notes": "Buy only one train from bank.",
-      "price": 100
+      "name": "2"
     },
     {
-      "phase": "3",
       "train": "3",
-      "limit": "-/3",
-      "number": "6",
+      "limit": 3,
       "tiles": "green",
-      "notes": "Private companies may be purchased.",
-      "price": 180
+      "notes": [
+        "Private companies may be purchased.",
+        "5x3T: minor companies closed and NdM stock available."
+      ],
+      "name": "3"
     },
     {
-      "phase": "3.5",
-      "limit": "4/3",
-      "tiles": "green",
-      "notes": "When five 3Ts have been sold. Minor companies are closed. NdM stock available."
-    },
-    {
-      "phase": "4",
       "train": "4",
-      "rust": "2",
-      "limit": "3/2",
-      "number": "3",
+      "limit": 3,
       "tiles": "green",
       "notes": "May buy multiple trains.",
-      "price": 300
+      "name": "4"
     },
     {
-      "phase": "5",
       "train": "5",
-      "limit": "3/2",
-      "number": "2",
+      "limit": 3,
       "tiles": "brown",
-      "notes": "Private companies are closed. NdM merges (Pacific Railroad and Texas-Mexican Railway are not eligible to merge).",
-      "price": 450
+      "notes": ["Private companies closed.", "NdM merges."],
+      "name": "5"
     },
     {
-      "phase": "6",
       "train": "6",
-      "limit": "3/2",
-      "number": "2",
-      "rust": "3",
+      "limit": 3,
       "tiles": "brown",
-      "price": 600
+      "notes": "2x6T: 4Ts obsolete.",
+      "name": "6"
     },
     {
-      "phase": "6.5",
-      "limit": "3/2",
-      "tiles": "brown",
-      "rust": "4-O",
-      "notes": "When both 6Ts are sold. 4Ts become obsolete."
-    },
-    {
-      "phase": "4D",
       "train": "4D",
-      "limit": "3/2",
-      "number": "7",
+      "limit": 3,
       "tiles": "gray",
-      "price": 700,
-      "notes": "The gray tile becomes available."
+      "name": "4D"
     }
   ],
   "pools": [
@@ -733,105 +686,354 @@
     "455": 1,
     "470": {
       "color": "yellow",
-      "values": [{ "angle": 120, "percent": 0.667, "value": 20 }],
-      "names": [
-        { "name": "Copper Canyon", "angle": 270, "percent": 0.35, "rotation": 90 }
+      "values": [
+        {
+          "angle": 120,
+          "percent": 0.667,
+          "value": 20
+        }
       ],
-      "towns": [{ "angle": 180, "percent": 0.667, "rotate": 10 }],
+      "names": [
+        {
+          "name": "Copper Canyon",
+          "angle": 270,
+          "percent": 0.35,
+          "rotation": 90
+        }
+      ],
+      "towns": [
+        {
+          "angle": 180,
+          "percent": 0.667,
+          "rotate": 10
+        }
+      ],
       "track": [
-        { "side": 1, "type": "straight" },
-        { "side": 1, "type": "sharp" },
-        { "side": 2, "type": "gentle" }
+        {
+          "side": 1,
+          "type": "straight"
+        },
+        {
+          "side": 1,
+          "type": "sharp"
+        },
+        {
+          "side": 2,
+          "type": "gentle"
+        }
       ]
     },
     "471": {
       "color": "yellow",
       "broken": true,
       "values": [
-        { "angle": 150, "percent": 0.8, "value": 20 },
-        { "angle": 315, "percent": 0.7, "value": 10 }
+        {
+          "angle": 150,
+          "percent": 0.8,
+          "value": 20
+        },
+        {
+          "angle": 315,
+          "percent": 0.7,
+          "value": 10
+        }
       ],
-      "cities": [{ "name": { "offset": 25, "name": "Mazatlán" } }],
-      "towns": [{ "angle": 270, "rotation": 90, "percent": 0.58 }],
-      "track": [{ "side": 1 }, { "side": 4 }, { "side": 5.5, "type": "mid" }]
+      "cities": [
+        {
+          "name": {
+            "offset": 25,
+            "name": "Mazatlán"
+          }
+        }
+      ],
+      "towns": [
+        {
+          "angle": 270,
+          "rotation": 90,
+          "percent": 0.58
+        }
+      ],
+      "track": [
+        {
+          "side": 1
+        },
+        {
+          "side": 4
+        },
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        }
+      ]
     },
     "472": {
       "color": "yellow",
       "values": [
-        { "angle": 90, "percent": 0.8, "value": 20 },
-        { "angle": 285, "percent": 0.7, "value": 10 }
+        {
+          "angle": 90,
+          "percent": 0.8,
+          "value": 20
+        },
+        {
+          "angle": 285,
+          "percent": 0.7,
+          "value": 10
+        }
       ],
-      "cities": [{ "name": { "name": "Tampico" } }],
-      "towns": [{ "angle": 240, "rotation": 60, "percent": 0.58 }],
+      "cities": [
+        {
+          "name": {
+            "name": "Tampico"
+          }
+        }
+      ],
+      "towns": [
+        {
+          "angle": 240,
+          "rotation": 60,
+          "percent": 0.58
+        }
+      ],
       "track": [
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 5, "type": "mid" }
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        }
       ]
     },
     "473": {
       "color": "yellow",
       "broken": true,
       "values": [
-        { "angle": 90, "percent": 0.8, "value": 20 },
-        { "angle": 285, "percent": 0.7, "value": 10 }
+        {
+          "angle": 90,
+          "percent": 0.8,
+          "value": 20
+        },
+        {
+          "angle": 285,
+          "percent": 0.7,
+          "value": 10
+        }
       ],
-      "cities": [{ "name": { "name": "Veracruz" } }],
-      "towns": [{ "angle": 240, "rotation": 60, "percent": 0.58 }],
-      "track": [{ "side": 1 }, { "side": 3 }, { "side": 5, "type": "mid" }]
+      "cities": [
+        {
+          "name": {
+            "name": "Veracruz"
+          }
+        }
+      ],
+      "towns": [
+        {
+          "angle": 240,
+          "rotation": 60,
+          "percent": 0.58
+        }
+      ],
+      "track": [
+        {
+          "side": 1
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        }
+      ]
     },
     "474": 2,
     "475": {
       "color": "green",
-      "values": [{ "value": 30, "angle": 210, "percent": 0.8 }],
-      "cities": [{ "name": { "name": "Los Mochis" } }],
-      "track": [{ "side": 1 }, { "side": 2 }, { "side": 3 }]
+      "values": [
+        {
+          "value": 30,
+          "angle": 210,
+          "percent": 0.8
+        }
+      ],
+      "cities": [
+        {
+          "name": {
+            "name": "Los Mochis"
+          }
+        }
+      ],
+      "track": [
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        }
+      ]
     },
     "476": {
       "color": "green",
       "values": [
-        { "value": 30, "angle": 210, "percent": 0.8 },
-        { "value": 10, "angle": 315, "percent": 0.7 }
+        {
+          "value": 30,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 10,
+          "angle": 315,
+          "percent": 0.7
+        }
       ],
       "cities": [{}],
-      "names": [{ "name": "Mazatlán", "angle": 240, "percent": 0.667 }],
-      "towns": [{ "angle": 270, "percent": 0.58, "rotation": 90 }],
+      "names": [
+        {
+          "name": "Mazatlán",
+          "angle": 240,
+          "percent": 0.667
+        }
+      ],
+      "towns": [
+        {
+          "angle": 270,
+          "percent": 0.58,
+          "rotation": 90
+        }
+      ],
       "track": [
-        { "side": 5.5, "type": "mid" },
-        { "side": 1 },
-        { "side": 3 },
-        { "side": 4 }
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        },
+        {
+          "side": 1
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        }
       ]
     },
     "477": {
       "color": "green",
       "values": [
-        { "value": 30, "angle": 210, "percent": 0.8 },
-        { "value": 10, "angle": 315, "percent": 0.7 }
+        {
+          "value": 30,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 10,
+          "angle": 315,
+          "percent": 0.7
+        }
       ],
-      "names": [{ "name": "Tampico", "angle": 240, "percent": 0.667 }],
+      "names": [
+        {
+          "name": "Tampico",
+          "angle": 240,
+          "percent": 0.667
+        }
+      ],
       "cities": [{}],
-      "towns": [{ "angle": 270, "percent": 0.58, "rotation": 90 }],
+      "towns": [
+        {
+          "angle": 270,
+          "percent": 0.58,
+          "rotation": 90
+        }
+      ],
       "track": [
-        { "side": 5.5, "type": "mid" },
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 }
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        },
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        }
       ]
     },
     "478": {
       "color": "green",
       "broken": true,
       "values": [
-        { "value": 30, "angle": 210, "percent": 0.8 },
-        { "value": 20, "angle": 315, "percent": 0.7 }
+        {
+          "value": 30,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 20,
+          "angle": 315,
+          "percent": 0.7
+        }
       ],
-      "names": [{ "name": "Veracruz", "angle": 240, "percent": 0.667 }],
-      "cities": [{ "size": 2, "angle": 90, "percent": 0.3 }],
-      "towns": [{ "angle": 270, "percent": 0.58, "rotation": 90 }],
-      "track": [{ "side": 5.5, "type": "mid" }, { "side": 1 }, { "side": 3 }]
+      "names": [
+        {
+          "name": "Veracruz",
+          "angle": 240,
+          "percent": 0.667
+        }
+      ],
+      "cities": [
+        {
+          "size": 2,
+          "angle": 90,
+          "percent": 0.3
+        }
+      ],
+      "towns": [
+        {
+          "angle": 270,
+          "percent": 0.58,
+          "rotation": 90
+        }
+      ],
+      "track": [
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        },
+        {
+          "side": 1
+        },
+        {
+          "side": 3
+        }
+      ]
     },
     "480": {
       "color": "brown",
@@ -845,15 +1047,37 @@
           "fontSize": 8
         }
       ],
-      "values": [{ "value": 50, "angle": 210, "percent": 0.8 }],
-      "cities": [{ "size": 2 }],
+      "values": [
+        {
+          "value": 50,
+          "angle": 210,
+          "percent": 0.8
+        }
+      ],
+      "cities": [
+        {
+          "size": 2
+        }
+      ],
       "track": [
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 },
-        { "side": 5 },
-        { "side": 6 }
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        },
+        {
+          "side": 5
+        },
+        {
+          "side": 6
+        }
       ]
     },
     "481": {
@@ -888,55 +1112,253 @@
     "482": {
       "color": "brown",
       "values": [
-        { "value": 40, "angle": 210, "percent": 0.8 },
-        { "value": 20, "angle": 315, "percent": 0.7 }
+        {
+          "value": 40,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 20,
+          "angle": 315,
+          "percent": 0.7
+        }
       ],
-      "cities": [{ "size": 2, "angle": 90, "percent": 0.3 }],
-      "names": [{ "name": "Mazatlán", "angle": 240, "percent": 0.667 }],
-      "towns": [{ "angle": 270, "percent": 0.58, "rotation": 90 }],
+      "cities": [
+        {
+          "size": 2,
+          "angle": 90,
+          "percent": 0.3
+        }
+      ],
+      "names": [
+        {
+          "name": "Mazatlán",
+          "angle": 240,
+          "percent": 0.667
+        }
+      ],
+      "towns": [
+        {
+          "angle": 270,
+          "percent": 0.58,
+          "rotation": 90
+        }
+      ],
       "track": [
-        { "side": 5.5, "type": "mid" },
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 }
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        },
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        }
       ]
     },
     "483": {
       "color": "brown",
       "values": [
-        { "value": 40, "angle": 210, "percent": 0.8 },
-        { "value": 20, "angle": 315, "percent": 0.7 }
+        {
+          "value": 40,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 20,
+          "angle": 315,
+          "percent": 0.7
+        }
       ],
       "cities": [{}],
-      "names": [{ "name": "Tampico", "angle": 240, "percent": 0.667 }],
-      "towns": [{ "angle": 270, "percent": 0.58, "rotation": 90 }],
+      "names": [
+        {
+          "name": "Tampico",
+          "angle": 240,
+          "percent": 0.667
+        }
+      ],
+      "towns": [
+        {
+          "angle": 270,
+          "percent": 0.58,
+          "rotation": 90
+        }
+      ],
       "track": [
-        { "side": 5.5, "type": "mid" },
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 }
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        },
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        }
       ]
     },
     "484": {
       "color": "brown",
       "values": [
-        { "value": 40, "angle": 210, "percent": 0.8 },
-        { "value": 30, "angle": 315, "percent": 0.7 }
+        {
+          "value": 40,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 30,
+          "angle": 315,
+          "percent": 0.7
+        }
       ],
-      "cities": [{ "size": 2, "angle": 90, "percent": 0.3 }],
-      "names": [{ "name": "Veracruz", "angle": 240, "percent": 0.667 }],
-      "towns": [{ "angle": 270, "percent": 0.58, "rotation": 90 }],
+      "cities": [
+        {
+          "size": 2,
+          "angle": 90,
+          "percent": 0.3
+        }
+      ],
+      "names": [
+        {
+          "name": "Veracruz",
+          "angle": 240,
+          "percent": 0.667
+        }
+      ],
+      "towns": [
+        {
+          "angle": 270,
+          "percent": 0.58,
+          "rotation": 90
+        }
+      ],
       "track": [
-        { "side": 5.5, "type": "mid" },
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 }
+        {
+          "side": 5.5,
+          "type": "straight",
+          "end": 0.5,
+          "start": 0.25
+        },
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        }
       ]
     },
-    "479|a": 1,
-    "479|b": 1,
+    "619": 2,
+    "479|a": {
+      "color": "green",
+      "broken": true,
+      "group": "479",
+      "mask": false,
+      "rotation": 60,
+      "rotations": 1,
+      "values": [
+        {
+          "value": 40,
+          "angle": 210,
+          "percent": 0.75
+        }
+      ],
+      "cities": [
+        {
+          "angle": 300,
+          "percent": 0.29,
+          "size": 2,
+          "rotation": 30,
+          "name": {
+            "name": "Mexico City",
+            "reverse": true
+          },
+          "companies": [
+            {
+              "color": "green",
+              "label": "NdM"
+            }
+          ]
+        }
+      ],
+      "centerTowns": [
+        {
+          "angle": 120,
+          "percent": 0.65,
+          "name": {
+            "name": "Toluca"
+          }
+        }
+      ],
+      "track": [
+        {
+          "side": 4
+        },
+        {
+          "side": 6
+        }
+      ]
+    },
+    "479|b": {
+      "color": "green",
+      "broken": true,
+      "group": "479",
+      "mask": false,
+      "rotation": 60,
+      "rotations": 1,
+      "values": [
+        {
+          "value": 10,
+          "angle": 256,
+          "percent": 0.7
+        }
+      ],
+      "terrain": [
+        {
+          "type": "mountain",
+          "cost": 40,
+          "angle": 180,
+          "percent": 0.6
+        }
+      ],
+      "towns": [
+        {
+          "rotation": 120,
+          "angle": 300,
+          "percent": 0.5,
+          "name": {
+            "reverse": true,
+            "name": "Puebla"
+          }
+        }
+      ],
+      "track": [
+        {
+          "side": 3,
+          "type": "straight"
+        }
+      ]
+    },
     "485|a": {
       "color": "brown",
       "broken": true,
@@ -945,8 +1367,16 @@
       "rotation": 60,
       "rotations": 1,
       "values": [
-        { "value": 60, "angle": 210, "percent": 0.8 },
-        { "value": 10, "angle": 85, "percent": 0.8 }
+        {
+          "value": 60,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 10,
+          "angle": 85,
+          "percent": 0.8
+        }
       ],
       "cities": [
         {
@@ -955,8 +1385,15 @@
           "size": 2,
           "rotation": 30,
           "extend": "right",
-          "name": { "name": "Mexico City" },
-          "companies": [{ "color": "green", "label": "NdM" }]
+          "name": {
+            "name": "Mexico City"
+          },
+          "companies": [
+            {
+              "color": "green",
+              "label": "NdM"
+            }
+          ]
         }
       ],
       "towns": [
@@ -964,15 +1401,27 @@
           "angle": 120,
           "percent": 0.65,
           "rotation": -60,
-          "name": { "name": "Toluca" }
+          "name": {
+            "name": "Toluca"
+          }
         }
       ],
       "track": [
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 },
-        { "side": 6 }
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        },
+        {
+          "side": 6
+        }
       ]
     },
     "485|b": {
@@ -982,19 +1431,41 @@
       "mask": false,
       "rotation": 60,
       "rotations": 1,
-      "values": [{ "value": 10, "angle": 270, "percent": 0.85 }],
-      "cities": [{ "size": 2, "angle": 120, "percent": 1, "rotation": 30 }],
+      "values": [
+        {
+          "value": 10,
+          "angle": 270,
+          "percent": 0.85
+        }
+      ],
+      "cities": [
+        {
+          "size": 2,
+          "angle": 120,
+          "percent": 1,
+          "rotation": 30
+        }
+      ],
       "towns": [
         {
           "rotation": 120,
           "angle": 300,
           "percent": 0.5,
-          "name": { "reverse": true, "name": "Puebla" }
+          "name": {
+            "reverse": true,
+            "name": "Puebla"
+          }
         }
       ],
       "track": [
-        { "side": 3, "type": "gentle" },
-        { "side": 3, "type": "straight" }
+        {
+          "side": 3,
+          "type": "gentle"
+        },
+        {
+          "side": 3,
+          "type": "straight"
+        }
       ]
     },
     "486|a": {
@@ -1005,8 +1476,16 @@
       "rotation": 60,
       "rotations": 1,
       "values": [
-        { "value": 50, "angle": 210, "percent": 0.8 },
-        { "value": 10, "angle": 85, "percent": 0.8 }
+        {
+          "value": 50,
+          "angle": 210,
+          "percent": 0.8
+        },
+        {
+          "value": 10,
+          "angle": 85,
+          "percent": 0.8
+        }
       ],
       "cities": [
         {
@@ -1015,8 +1494,15 @@
           "size": 2,
           "rotation": 30,
           "extend": "right",
-          "name": { "name": "Mexico City" },
-          "companies": [{ "color": "green", "label": "NdM" }]
+          "name": {
+            "name": "Mexico City"
+          },
+          "companies": [
+            {
+              "color": "green",
+              "label": "NdM"
+            }
+          ]
         }
       ],
       "towns": [
@@ -1024,15 +1510,27 @@
           "angle": 120,
           "percent": 0.65,
           "rotation": -60,
-          "name": { "name": "Toluca" }
+          "name": {
+            "name": "Toluca"
+          }
         }
       ],
       "track": [
-        { "side": 1 },
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 },
-        { "side": 6 }
+        {
+          "side": 1
+        },
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        },
+        {
+          "side": 6
+        }
       ]
     },
     "486|b": {
@@ -1042,7 +1540,13 @@
       "mask": false,
       "rotation": 60,
       "rotations": 1,
-      "values": [{ "value": 10, "angle": 265, "percent": 0.82 }],
+      "values": [
+        {
+          "value": 10,
+          "angle": 265,
+          "percent": 0.82
+        }
+      ],
       "cities": [
         {
           "angle": 120,
@@ -1057,15 +1561,23 @@
           "rotation": 120,
           "angle": 300,
           "percent": 0.6,
-          "name": { "reverse": true, "name": "Puebla" }
+          "name": {
+            "reverse": true,
+            "name": "Puebla"
+          }
         }
       ],
       "track": [
-        { "side": 3, "type": "gentle" },
-        { "side": 3, "type": "straight" }
+        {
+          "side": 3,
+          "type": "gentle"
+        },
+        {
+          "side": 3,
+          "type": "straight"
+        }
       ]
-    },
-    "619": 2
+    }
   },
   "map": {
     "hexes": [
@@ -1086,15 +1598,17 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["F1"],
+        "track": [
           {
-            "side": 1
+            "side": 1,
+            "type": "offboard"
           },
           {
-            "side": 2
+            "side": 2,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["F1"]
+        ]
       },
       {
         "color": "offboard",
@@ -1113,12 +1627,13 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["A2"],
+        "track": [
           {
-            "side": 6
+            "side": 6,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["A2"]
+        ]
       },
       {
         "color": "gray",
@@ -1164,7 +1679,7 @@
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$120"
+            "cost": 120
           }
         ],
         "hexes": [
@@ -1186,7 +1701,7 @@
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$60"
+            "cost": 60
           }
         ],
         "hexes": ["B3", "K12", "H17", "L17"]
@@ -1196,7 +1711,7 @@
         "terrain": [
           {
             "type": "cactus",
-            "cost": "$20"
+            "cost": 20
           }
         ],
         "hexes": ["B5"]
@@ -1206,7 +1721,7 @@
         "terrain": [
           {
             "type": "cactus",
-            "cost": "$20"
+            "cost": 20
           }
         ],
         "hexes": ["F3", "E4", "H5", "J5", "C6", "F7", "I8", "I10", "K10"]
@@ -1220,11 +1735,14 @@
             }
           }
         ],
-        "mountain": {
-          "percent": 0.667,
-          "cost": "$60"
-        },
-        "hexes": ["C4"]
+        "hexes": ["C4"],
+        "terrain": [
+          {
+            "percent": 0.667,
+            "cost": 60,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "yellow",
@@ -1267,7 +1785,7 @@
         "terrain": [
           {
             "type": "river",
-            "cost": "$20"
+            "cost": 20
           }
         ],
         "hexes": ["I4", "K8", "G14", "K20", "M20"]
@@ -1308,16 +1826,19 @@
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": "$120"
-        },
         "names": [
           {
             "name": "Copper Canyon",
             "percent": 0.55
           }
         ],
-        "hexes": ["E6"]
+        "hexes": ["E6"],
+        "terrain": [
+          {
+            "cost": 120,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",
@@ -1336,7 +1857,7 @@
         "terrain": [
           {
             "type": "river",
-            "cost": "$20",
+            "cost": 20,
             "angle": 180,
             "percent": 0.65
           }
@@ -1348,7 +1869,7 @@
         "terrain": [
           {
             "type": "swamp",
-            "cost": "$40"
+            "cost": 40
           }
         ],
         "hexes": ["L7", "L11"]
@@ -1366,7 +1887,7 @@
         "terrain": [
           {
             "type": "river",
-            "cost": "$20",
+            "cost": 20,
             "angle": 180,
             "percent": 0.65
           }
@@ -1468,11 +1989,14 @@
             }
           }
         ],
-        "mountain": {
-          "percent": 0.6,
-          "cost": "$60"
-        },
-        "hexes": ["G10"]
+        "hexes": ["G10"],
+        "terrain": [
+          {
+            "percent": 0.6,
+            "cost": 60,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",
@@ -1487,7 +2011,7 @@
           {
             "type": "cactus",
             "percent": 0.6,
-            "cost": "$20"
+            "cost": 20
           }
         ],
         "hexes": ["H11"]
@@ -1524,7 +2048,7 @@
         "terrain": [
           {
             "type": "river",
-            "cost": "$20",
+            "cost": 20,
             "angle": 180,
             "percent": 0.65
           }
@@ -1539,7 +2063,9 @@
         "track": [
           {
             "side": 2,
-            "type": "mid"
+            "type": "straight",
+            "end": 0.5,
+            "start": 0.25
           }
         ],
         "hexes": ["F11"]
@@ -1568,7 +2094,7 @@
           {
             "type": "mountain",
             "percent": 0.667,
-            "cost": "$60"
+            "cost": 60
           }
         ],
         "hexes": ["J13"]
@@ -1604,7 +2130,7 @@
         "terrain": [
           {
             "type": "swamp",
-            "cost": "$40",
+            "cost": 40,
             "percent": 0.65
           }
         ],
@@ -1618,7 +2144,9 @@
         "track": [
           {
             "side": 5,
-            "type": "mid"
+            "type": "straight",
+            "end": 0.5,
+            "start": 0.25
           }
         ],
         "hexes": ["L13"]
@@ -1642,7 +2170,7 @@
         "terrain": [
           {
             "type": "river",
-            "cost": "$20",
+            "cost": 20,
             "angle": 180,
             "percent": 0.65
           }
@@ -1654,7 +2182,7 @@
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$60"
+            "cost": 60
           }
         ],
         "hexes": ["K14"]
@@ -1707,7 +2235,7 @@
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$60"
+            "cost": 60
           }
         ],
         "hexes": ["L15"]
@@ -1728,7 +2256,7 @@
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$60",
+            "cost": 60,
             "angle": 30,
             "percent": 0.6
           }
@@ -1780,7 +2308,7 @@
         "terrain": [
           {
             "type": "swamp",
-            "cost": "$40",
+            "cost": 40,
             "percent": 0.65
           }
         ],
@@ -1791,7 +2319,7 @@
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$120"
+            "cost": 120
           }
         ],
         "hexes": ["J17"]
@@ -1825,22 +2353,24 @@
             ]
           }
         ],
-        "offBoardTrack": [
+        "hexes": ["N17"],
+        "track": [
           {
-            "side": 2
+            "side": 2,
+            "type": "offboard"
           },
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["N17"]
+        ]
       },
       {
         "color": "plain",
         "terrain": [
           {
             "type": "mountain",
-            "cost": "$120"
+            "cost": 120
           }
         ],
         "hexes": ["K18"]
@@ -1852,7 +2382,7 @@
             "type": "mountain",
             "angle": 150,
             "percent": 0.6,
-            "cost": "$60"
+            "cost": 60
           }
         ],
         "track": [
@@ -1876,7 +2406,7 @@
           {
             "type": "mountain",
             "percent": 0.6,
-            "cost": "$120"
+            "cost": 120
           }
         ],
         "hexes": ["J19"]
@@ -1907,7 +2437,7 @@
         "terrain": [
           {
             "type": "river",
-            "cost": "$20",
+            "cost": 20,
             "percent": 0.65
           }
         ],
@@ -1945,12 +2475,13 @@
             }
           ]
         },
-        "offBoardTrack": [
+        "hexes": ["N21"],
+        "track": [
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["N21"]
+        ]
       }
     ],
     "borders": [

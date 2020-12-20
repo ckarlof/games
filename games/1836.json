@@ -85,70 +85,90 @@
       "name": "Cincinnati, Hamilton & Dayton Railway ①",
       "minor": true,
       "abbrev": "CH&D",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "natural"
     },
     {
       "name": "Zanesville & Ohio River Railroad ②",
       "minor": true,
       "abbrev": "Z&OR",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "brightGreen"
     },
     {
       "name": "Columbus, Hocking Valley & Toledo Railway ③",
       "minor": true,
       "abbrev": "CHV&T",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "red"
     },
     {
       "name": "Columbus, Sandusky & Hocking Railway ④",
       "minor": true,
       "abbrev": "CS&H",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "orange"
     },
     {
       "name": "Cleveland, Canton & Southern Railroad ⑤",
       "minor": true,
       "abbrev": "CC&S",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "brown"
     },
     {
       "name": "Detroit & Lima Northern Railroad ⑥",
       "minor": true,
       "abbrev": "D&LN",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "lavender"
     },
     {
       "name": "Lake Shore & Michigan Southern Railway ⑦",
       "minor": true,
       "abbrev": "LS&MS",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "pink"
     },
     {
       "name": "Cleveland, Lorain & Wheeling Railway ⑧",
       "minor": true,
       "abbrev": "CL&W",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "turquoise"
     },
     {
       "name": "Cincinnati & Muskingum Valley Railway ⑨",
       "minor": true,
       "abbrev": "C&MV",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "tan"
     },
     {
       "name": "Toledo & Ohio Central Railway ⑩",
       "minor": true,
       "abbrev": "T&OC",
-      "token": { "bar": true },
+      "token": {
+        "bar": true
+      },
       "color": "purple"
     }
   ],
@@ -157,77 +177,41 @@
       "name": "2: ER",
       "quantity": 10,
       "color": "yellow",
-      "description": "May not be sold",
-      "info": [
-        {
-          "color": "offboard",
-          "note": "Eliminated on acquisition"
-        },
-        {
-          "color": "green",
-          "note": "Rusted by 4"
-        }
-      ]
+      "description": "May not be sold. Eliminated on acquisition.",
+      "rust": "4"
     },
     {
       "name": "2",
       "quantity": 6,
       "price": 80,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4"
-        }
-      ]
+      "rust": "4"
     },
     {
       "name": "3",
       "quantity": 5,
       "price": 180,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 6"
-        }
-      ]
+      "rust": "6"
     },
     {
       "name": "4",
       "quantity": 4,
       "price": 300,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by D"
-        }
-      ]
+      "rust": "D"
     },
     {
       "name": "5",
       "quantity": 3,
       "price": 450,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "6",
       "quantity": 3,
       "price": 630,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "D",
@@ -235,92 +219,78 @@
       "price": 1100,
       "color": "brown",
       "description": "Cost $800 when trading in a 4T, 5T or 6T",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "available": "6",
+      "discount": {
+        "4": 300,
+        "5": 300,
+        "6": 300
+      }
     }
   ],
   "phases": [
     {
       "name": "2",
-      "limit": "4",
-      "number": "6",
-      "price": 80,
+      "limit": 4,
+      "rounds": 1,
       "tiles": "yellow"
     },
     {
       "name": "3",
-      "limit": "4",
-      "number": "5",
-      "price": 180,
+      "limit": 4,
+      "rounds": 2,
       "tiles": "green"
     },
     {
       "name": "4",
-      "rust": "2",
-      "limit": "3",
-      "number": "4",
-      "price": 300,
+      "limit": 3,
+      "rounds": 2,
       "tiles": "green"
     },
     {
       "name": "5",
-      "limit": "2",
-      "number": "3",
-      "price": 450,
+      "limit": 2,
+      "rounds": 3,
       "tiles": "brown"
     },
     {
       "name": "6",
-      "limit": "2",
-      "number": "3",
-      "price": 630,
-      "rust": "3",
+      "limit": 2,
+      "rounds": 3,
       "tiles": "brown",
       "notes": "D Trains may be purchased, Early Railroads are closed"
     },
     {
       "name": "D",
-      "limit": "2",
-      "number": "6",
-      "price": 1100,
-      "rust": "4",
+      "limit": 2,
+      "rounds": 3,
       "tiles": "brown"
     },
     {
       "minor": true,
       "name": "2",
-      "limit": "3",
-      "number": "6",
-      "price": 80,
+      "limit": 3,
+      "rounds": 1,
       "tiles": "yellow"
     },
     {
       "minor": true,
       "name": "3",
-      "limit": "3",
-      "number": "5",
-      "price": 180,
+      "limit": 3,
+      "rounds": 2,
       "tiles": "green"
     },
     {
       "minor": true,
       "name": "4",
-      "limit": "3",
-      "number": "4",
-      "price": 300,
-      "rust": "2",
+      "limit": 3,
+      "rounds": 2,
       "tiles": "green"
     },
     {
       "minor": true,
       "name": "5",
-      "limit": "2",
-      "price": 450,
-      "number": "3",
+      "limit": 2,
+      "rounds": 3,
       "tiles": "brown"
     }
   ],
@@ -771,14 +741,6 @@
             "companies": ["NYC"]
           }
         ],
-        "offBoardTrack": [
-          {
-            "side": 1
-          },
-          {
-            "side": 2
-          }
-        ],
         "values": [
           {
             "value": 40,
@@ -786,21 +748,23 @@
             "percent": 0.667
           }
         ],
-        "hexes": ["K1"]
+        "hexes": ["K1"],
+        "track": [
+          {
+            "side": 1,
+            "type": "offboard"
+          },
+          {
+            "side": 2,
+            "type": "offboard"
+          }
+        ]
       },
       {
         "color": "offboard",
         "cities": [
           {
             "companies": ["ERIE"]
-          }
-        ],
-        "offBoardTrack": [
-          {
-            "side": 1
-          },
-          {
-            "side": 6
           }
         ],
         "values": [
@@ -810,7 +774,17 @@
             "percent": 0.667
           }
         ],
-        "hexes": ["A3"]
+        "hexes": ["A3"],
+        "track": [
+          {
+            "side": 1,
+            "type": "offboard"
+          },
+          {
+            "side": 6,
+            "type": "offboard"
+          }
+        ]
       },
       {
         "color": "gray",
@@ -930,16 +904,19 @@
         "hexes": ["B6"]
       },
       {
-        "copy": "J4",
+        "color": "plain",
         "centerTowns": [
           {
+            "y": -30,
             "name": {
               "name": "Sandusky"
             }
           },
           {
+            "y": 30,
             "name": {
-              "name": "Norwalk"
+              "name": "Norwalk",
+              "reverse": true
             }
           }
         ],
@@ -980,8 +957,9 @@
         ],
         "track": [
           {
-            "type": "stop",
-            "side": 3
+            "type": "straight",
+            "side": 3,
+            "end": 0.25
           }
         ],
         "hexes": ["I7"]
@@ -1039,20 +1017,6 @@
             "companies": ["PRR"]
           }
         ],
-        "offBoardTrack": [
-          {
-            "side": 1
-          },
-          {
-            "side": 2
-          },
-          {
-            "side": 3
-          },
-          {
-            "side": 4
-          }
-        ],
         "values": [
           {
             "value": 40,
@@ -1060,7 +1024,25 @@
             "percent": 0.667
           }
         ],
-        "hexes": ["K9"]
+        "hexes": ["K9"],
+        "track": [
+          {
+            "side": 1,
+            "type": "offboard"
+          },
+          {
+            "side": 2,
+            "type": "offboard"
+          },
+          {
+            "side": 3,
+            "type": "offboard"
+          },
+          {
+            "side": 4,
+            "type": "offboard"
+          }
+        ]
       },
       {
         "color": "plain",
@@ -1199,17 +1181,6 @@
             "companies": ["B&O"]
           }
         ],
-        "offBoardTrack": [
-          {
-            "side": 2
-          },
-          {
-            "side": 3
-          },
-          {
-            "side": 4
-          }
-        ],
         "values": [
           {
             "value": 40,
@@ -1217,7 +1188,21 @@
             "percent": 0.667
           }
         ],
-        "hexes": ["K13"]
+        "hexes": ["K13"],
+        "track": [
+          {
+            "side": 2,
+            "type": "offboard"
+          },
+          {
+            "side": 3,
+            "type": "offboard"
+          },
+          {
+            "side": 4,
+            "type": "offboard"
+          }
+        ]
       },
       {
         "color": "yellow",
@@ -1254,19 +1239,23 @@
         ],
         "track": [
           {
-            "type": "stop",
-            "side": 5
+            "type": "straight",
+            "side": 5,
+            "end": 0.25
           }
         ],
         "hexes": ["B14"]
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": 40,
-          "size": "medium"
-        },
-        "hexes": ["J14"]
+        "hexes": ["J14"],
+        "terrain": [
+          {
+            "cost": 40,
+            "size": "medium",
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",
@@ -1356,17 +1345,20 @@
         "hexes": ["H16"]
       },
       {
-        "copy": "K11",
+        "color": "plain",
         "centerTowns": [
           {
             "name": {
-              "name": "Washington"
-            }
+              "name": "Washington",
+              "reverse": true
+            },
+            "x": 30
           },
           {
             "name": {
               "name": "Wilmington"
-            }
+            },
+            "x": -30
           }
         ],
         "hexes": ["C17"]
@@ -1400,17 +1392,6 @@
             "companies": ["C&O"]
           }
         ],
-        "offBoardTrack": [
-          {
-            "side": 3
-          },
-          {
-            "side": 4
-          },
-          {
-            "side": 5
-          }
-        ],
         "values": [
           {
             "value": 40,
@@ -1418,14 +1399,31 @@
             "percent": 0.667
           }
         ],
-        "hexes": ["E21"]
+        "hexes": ["E21"],
+        "track": [
+          {
+            "side": 3,
+            "type": "offboard"
+          },
+          {
+            "side": 4,
+            "type": "offboard"
+          },
+          {
+            "side": 5,
+            "type": "offboard"
+          }
+        ]
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": 20
-        },
-        "hexes": ["H18", "I15", "I17"]
+        "hexes": ["H18", "I15", "I17"],
+        "terrain": [
+          {
+            "cost": 20,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",

@@ -123,60 +123,33 @@
       "quantity": 5,
       "price": 100,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4"
-        }
-      ]
+      "rust": "4"
     },
     {
       "name": "3",
       "quantity": 4,
       "price": 225,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 6"
-        }
-      ]
+      "rust": "6"
     },
     {
       "name": "4",
       "quantity": 3,
       "price": 350,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 8"
-        }
-      ]
+      "rust": "8"
     },
     {
       "name": "5",
       "quantity": 2,
       "price": 550,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "6",
       "quantity": 2,
       "price": 700,
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "color": "brown"
     },
     {
       "name": "8",
@@ -184,12 +157,11 @@
       "price": 1000,
       "color": "brown",
       "description": "Cost F650 when trading in a 4T, 5T, or 6T",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "discount": {
+        "4": 350,
+        "5": 350,
+        "6": 350
+      }
     }
   ],
   "privates": [
@@ -221,7 +193,9 @@
       "id": "RdP",
       "price": 70,
       "revenue": 15,
-      "token": { "label": "+20" },
+      "token": {
+        "label": "+20"
+      },
       "description": "Owning corporation may place the +20 token on any city or town. The value of that location is increased by F20 for each and every time that corporation’s trains visit it. Once placed, the token cannot be moved."
     },
     {
@@ -229,52 +203,45 @@
       "id": "RdP",
       "price": 70,
       "revenue": 15,
-      "token": { "label": "+20" },
+      "token": {
+        "label": "+20"
+      },
       "description": "At any time during its operating round, the owning corporation may place the +20 token on any city or town. The value of that location is increased by F20 for each and every time that corporation’s trains visit it. Once placed, the token cannot be moved. Placing the token closes this private company. The token is removed with the purchase of the first 6 Train."
     }
   ],
   "phases": [
     {
       "name": "2",
-      "limit": "4",
-      "number": "5",
+      "limit": 4,
       "tiles": "yellow",
       "notes": "1 operating round, low off-board values"
     },
     {
       "name": "3",
-      "limit": "4",
-      "number": "4",
+      "limit": 4,
       "tiles": "green",
       "notes": "2 operating rounds, private companies may be purchased"
     },
     {
       "name": "4",
-      "rust": "2",
-      "limit": "3",
-      "number": "3",
+      "limit": 3,
       "tiles": "green"
     },
     {
       "name": "5",
-      "limit": "2",
-      "number": "2",
+      "limit": 2,
       "tiles": "brown",
       "notes": "3 operating rounds, high off-board values, private companies are closed"
     },
     {
       "name": "6",
-      "limit": "2",
-      "number": "2",
-      "rust": "3",
+      "limit": 2,
       "tiles": "brown",
       "notes": "SS railway forms, 8 Trains may be purchased"
     },
     {
       "name": "8",
-      "limit": "2",
-      "number": "5",
-      "rust": "4",
+      "limit": 2,
       "tiles": "brown"
     }
   ],
@@ -737,15 +704,41 @@
     "125": {
       "quantity": 4,
       "color": "brown",
-      "labels": [{ "label": "L", "angle": 270, "percent": 0.87 }],
-      "values": [{ "angle": 210, "percent": 0.8, "value": 40 }],
-      "cities": [{ "size": 2 }],
+      "labels": [
+        {
+          "label": "L",
+          "angle": 270,
+          "percent": 0.87
+        }
+      ],
+      "values": [
+        {
+          "angle": 210,
+          "percent": 0.8,
+          "value": 40
+        }
+      ],
+      "cities": [
+        {
+          "size": 2
+        }
+      ],
       "track": [
-        { "side": 2 },
-        { "side": 3 },
-        { "side": 4 },
-        { "side": 5 },
-        { "side": 6 }
+        {
+          "side": 2
+        },
+        {
+          "side": 3
+        },
+        {
+          "side": 4
+        },
+        {
+          "side": 5
+        },
+        {
+          "side": 6
+        }
       ]
     },
     "126": 1,
@@ -816,15 +809,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["A13"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             },
             {
-              "side": 6
+              "side": 6,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["A13"]
+          ]
         },
         {
           "color": "plain",
@@ -1193,8 +1188,7 @@
               "companies": ["Nord"],
               "name": {
                 "name": "Lille",
-                "offset": 42,
-                "reverse": false
+                "offset": 42
               }
             }
           ],
@@ -1309,15 +1303,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["E3"],
+          "track": [
             {
-              "side": 4
+              "side": 4,
+              "type": "offboard"
             },
             {
-              "side": 5
+              "side": 5,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["E3"]
+          ]
         },
         {
           "color": "water",
@@ -1336,15 +1332,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["G1"],
+          "track": [
             {
-              "side": 4
+              "side": 4,
+              "type": "offboard"
             },
             {
-              "side": 5
+              "side": 5,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["G1"]
+          ]
         },
         {
           "color": "land",
@@ -1363,15 +1361,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["J2"],
+          "track": [
             {
-              "side": 3
+              "side": 3,
+              "type": "offboard"
             },
             {
-              "side": 4
+              "side": 4,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["J2"]
+          ]
         },
         {
           "color": "offboard",
@@ -1390,12 +1390,13 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["E13"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["E13"]
+          ]
         },
         {
           "color": "offboard",
@@ -1414,12 +1415,13 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["H12"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["H12"]
+          ]
         },
         {
           "color": "plain",
@@ -1471,15 +1473,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["K13"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             },
             {
-              "side": 2
+              "side": 2,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["K13"]
+          ]
         }
       ],
       "borders": [
@@ -1581,10 +1585,8 @@
           ],
           "tokens": [
             {
-              "company": {
-                "color": "cyan",
-                "label": "LPS"
-              },
+              "color": "cyan",
+              "label": "LPS",
               "destination": true,
               "angle": 60,
               "percent": 0.75
@@ -1623,10 +1625,8 @@
           ],
           "tokens": [
             {
-              "company": {
-                "label": "THB",
-                "color": "yellow"
-              },
+              "label": "THB",
+              "color": "yellow",
               "destination": true,
               "angle": 225,
               "percent": 0.75
@@ -1674,10 +1674,8 @@
           ],
           "tokens": [
             {
-              "company": {
-                "color": "purple",
-                "label": "CV"
-              },
+              "color": "purple",
+              "label": "CV",
               "destination": true,
               "angle": 135,
               "percent": 0.75
@@ -1758,10 +1756,8 @@
           ],
           "tokens": [
             {
-              "company": {
-                "color": "pink",
-                "label": "CPR"
-              },
+              "color": "pink",
+              "label": "CPR",
               "destination": true,
               "angle": 225,
               "percent": 0.75
@@ -1801,8 +1797,7 @@
               ],
               "name": {
                 "name": "Lille",
-                "offset": 42,
-                "reverse": false
+                "offset": 42
               }
             }
           ],
@@ -1842,10 +1837,8 @@
           ],
           "tokens": [
             {
-              "company": {
-                "label": "GW",
-                "color": "brown"
-              },
+              "label": "GW",
+              "color": "brown",
               "destination": true,
               "percent": 0.8
             }
@@ -1856,10 +1849,8 @@
           "color": "offboard",
           "tokens": [
             {
-              "company": {
-                "color": "green",
-                "label": "GT"
-              },
+              "color": "green",
+              "label": "GT",
               "destination": true,
               "percent": 0.6
             }
@@ -1879,15 +1870,17 @@
               }
             ]
           },
-          "offBoardTrack": [
+          "hexes": ["K13"],
+          "track": [
             {
-              "side": 1
+              "side": 1,
+              "type": "offboard"
             },
             {
-              "side": 2
+              "side": 2,
+              "type": "offboard"
             }
-          ],
-          "hexes": ["K13"]
+          ]
         },
         {
           "color": "plain",

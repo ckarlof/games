@@ -3,6 +3,7 @@
     "title": "1879",
     "subtitle": "US Pacific Northwest",
     "designer": "Eddie Robbins",
+    "publisher": "winsome",
     "background": "gray",
     "orientation": "horizontal",
     "titleX": 1250,
@@ -51,37 +52,37 @@
     {
       "name": "Northern Pacific Railway",
       "abbrev": "NP",
-      "tokens": ["Free", "$40", "$100", "$100", "$100", "$100"],
+      "tokens": ["Free", 40, 100, 100, 100, 100],
       "color": "purple"
     },
     {
       "name": "Great Northern Railway",
       "abbrev": "GN",
-      "tokens": ["Free", "$40", "$100", "$100", "$100"],
+      "tokens": ["Free", 40, 100, 100, 100],
       "color": "cyan"
     },
     {
       "name": "Milwaukee Road",
       "abbrev": "MILW",
-      "tokens": ["Free", "$40", "$100", "$100"],
+      "tokens": ["Free", 40, 100, 100],
       "color": "red"
     },
     {
       "name": "Union Pacific Railroad",
       "abbrev": "UP",
-      "tokens": ["Free", "$40", "$100", "$100"],
+      "tokens": ["Free", 40, 100, 100],
       "color": "natural"
     },
     {
       "name": "Southern Pacific",
       "abbrev": "SP",
-      "tokens": ["Free", "$40", "$100"],
+      "tokens": ["Free", 40, 100],
       "color": "yellow"
     },
     {
       "name": "Spokane, Portland and Seattle Railway",
       "abbrev": "SPS",
-      "tokens": ["Free", "$40"],
+      "tokens": ["Free", 40],
       "color": "green"
     }
   ],
@@ -89,116 +90,79 @@
     {
       "name": "2",
       "quantity": 5,
-      "price": "$80",
+      "price": 80,
       "color": "yellow",
-      "info": [
-        {
-          "color": "green",
-          "note": "Rusted by 4"
-        }
-      ]
+      "rust": "4"
     },
     {
       "name": "3",
       "quantity": 4,
-      "price": "$180",
+      "price": 180,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by 6"
-        }
-      ]
+      "rust": "6"
     },
     {
       "name": "4",
       "quantity": 3,
-      "price": "$300",
+      "price": 300,
       "color": "green",
-      "info": [
-        {
-          "color": "brown",
-          "note": "Rusted by D"
-        }
-      ]
+      "rust": "D"
     },
     {
       "name": "5",
       "quantity": 2,
-      "price": "$450",
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "price": 450,
+      "color": "brown"
     },
     {
       "name": "6",
       "quantity": 2,
-      "price": "$630",
-      "color": "brown",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "price": 630,
+      "color": "brown"
     },
     {
       "name": "D",
       "quantity": 6,
-      "price": "$1100",
+      "price": 1100,
       "color": "brown",
       "description": "Cost $800 when trading in a 4T, 5T or 6T",
-      "info": [
-        {
-          "color": "yellow",
-          "note": "Permanent"
-        }
-      ]
+      "discount": {
+        "4": 300,
+        "5": 300,
+        "6": 300
+      }
     }
   ],
   "phases": [
     {
       "name": "2",
-      "limit": "4",
-      "number": "5",
+      "limit": 4,
       "tiles": "yellow"
     },
     {
       "name": "3",
-      "limit": "4",
-      "number": "4",
+      "limit": 4,
       "tiles": "green"
     },
     {
       "name": "4",
-      "rust": "2",
-      "limit": "3",
-      "number": "3",
+      "limit": 3,
       "tiles": "green"
     },
     {
       "name": "5",
-      "limit": "2",
-      "number": "2",
+      "limit": 2,
       "tiles": "brown"
     },
     {
       "name": "6",
-      "limit": "2",
-      "number": "2",
-      "rust": "3",
+      "limit": 2,
       "tiles": "brown",
       "notes": "D Trains may be purchased"
     },
     {
       "name": "D",
-      "limit": "2",
-      "number": "6",
-      "rust": "4",
+      "limit": 2,
       "tiles": "brown"
     }
   ],
@@ -835,7 +799,14 @@
         "hexes": ["C14"]
       },
       {
-        "copy": "C14",
+        "color": "yellow",
+        "labels": [
+          {
+            "label": "OO",
+            "angle": 220,
+            "percent": 0.65
+          }
+        ],
         "cities": [
           {
             "angle": 320,
@@ -856,7 +827,14 @@
         "hexes": ["L11"]
       },
       {
-        "copy": "C14",
+        "color": "yellow",
+        "labels": [
+          {
+            "label": "OO",
+            "angle": 220,
+            "percent": 0.65
+          }
+        ],
         "cities": [
           {
             "angle": 320,
@@ -877,37 +855,50 @@
         ],
         "track": [
           {
-            "type": "stop",
-            "side": 6
+            "type": "straight",
+            "side": 6,
+            "end": 0.25
           }
         ],
         "hexes": ["C12"]
       },
       {
         "color": "gray",
-        "offBoardTrack": [
-          {
-            "side": 3
-          },
-          {
-            "side": 4
-          }
-        ],
         "cities": [
           {
             "companies": ["SP"]
           }
         ],
-        "hexes": ["C18"]
+        "hexes": ["C18"],
+        "track": [
+          {
+            "side": 3,
+            "type": "offboard"
+          },
+          {
+            "side": 4,
+            "type": "offboard"
+          }
+        ]
       },
       {
-        "copy": "C18",
+        "color": "gray",
         "cities": [
           {
             "companies": ["UP"]
           }
         ],
-        "hexes": ["M14"]
+        "hexes": ["M14"],
+        "track": [
+          {
+            "side": 3,
+            "type": "offboard"
+          },
+          {
+            "side": 4,
+            "type": "offboard"
+          }
+        ]
       },
       {
         "color": "gray",
@@ -916,12 +907,13 @@
             "companies": ["NP"]
           }
         ],
-        "offBoardTrack": [
+        "hexes": ["N1"],
+        "track": [
           {
-            "side": 2
+            "side": 2,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["N1"]
+        ]
       },
       {
         "color": "gray",
@@ -930,15 +922,17 @@
             "companies": ["GN"]
           }
         ],
-        "offBoardTrack": [
+        "hexes": ["N3"],
+        "track": [
           {
-            "side": 2
+            "side": 2,
+            "type": "offboard"
           },
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["N3"]
+        ]
       },
       {
         "color": "gray",
@@ -947,20 +941,22 @@
             "companies": ["MILW"]
           }
         ],
-        "offBoardTrack": [
+        "hexes": ["N5"],
+        "track": [
           {
-            "side": 1
+            "side": 1,
+            "type": "offboard"
           },
           {
-            "side": 2
+            "side": 2,
+            "type": "offboard"
           },
           {
-            "side": 3
+            "side": 3,
+            "type": "offboard"
           }
-        ],
-        "hexes": ["N5"]
+        ]
       },
-
       {
         "color": "yellow",
         "cities": [
@@ -992,14 +988,22 @@
         ],
         "track": [
           {
-            "type": "stop",
-            "side": 5
+            "type": "straight",
+            "side": 5,
+            "end": 0.25
           }
         ],
         "hexes": ["D3"]
       },
       {
-        "copy": "C14",
+        "color": "yellow",
+        "labels": [
+          {
+            "label": "OO",
+            "angle": 220,
+            "percent": 0.65
+          }
+        ],
         "cities": [
           {
             "angle": 320,
@@ -1109,14 +1113,17 @@
         "hexes": ["J11"]
       },
       {
-        "copy": "J11",
+        "color": "plain",
         "centerTowns": [
           {
+            "x": -30,
             "name": {
-              "name": "Kahlos"
+              "name": "Kahlos",
+              "reverse": true
             }
           },
           {
+            "x": 30,
             "name": {
               "name": "Connell"
             }
@@ -1125,14 +1132,17 @@
         "hexes": ["K8"]
       },
       {
-        "copy": "J11",
+        "color": "plain",
         "centerTowns": [
           {
+            "x": -30,
             "name": {
-              "name": "Marengo"
+              "name": "Marengo",
+              "reverse": true
             }
           },
           {
+            "x": 30,
             "name": {
               "name": "Ritzville"
             }
@@ -1184,19 +1194,20 @@
           }
         ],
         "offBoardRevenue": {
-          "percent": -0.75,
+          "angle": 180,
+          "percent": 0.75,
           "revenues": [
             {
               "color": "yellow",
-              "cost": "20"
+              "cost": 20
             },
             {
               "color": "green",
-              "cost": "30"
+              "cost": 30
             },
             {
               "color": "brown",
-              "cost": "40"
+              "cost": 40
             }
           ]
         },
@@ -1218,24 +1229,33 @@
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": "$80"
-        },
-        "hexes": ["G4", "H5", "M8", "M10", "N9", "N11"]
+        "hexes": ["G4", "H5", "M8", "M10", "N9", "N11"],
+        "terrain": [
+          {
+            "cost": 80,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": "$120"
-        },
-        "hexes": ["D11", "D15", "F7", "F9", "F11", "N13"]
+        "hexes": ["D11", "D15", "F7", "F9", "F11", "N13"],
+        "terrain": [
+          {
+            "cost": 120,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",
-        "mountain": {
-          "cost": "$160"
-        },
-        "hexes": ["D9", "E6", "E8", "E10"]
+        "hexes": ["D9", "E6", "E8", "E10"],
+        "terrain": [
+          {
+            "cost": 160,
+            "type": "mountain"
+          }
+        ]
       },
       {
         "color": "plain",
